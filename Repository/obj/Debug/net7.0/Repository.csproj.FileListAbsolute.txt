@@ -1,0 +1,17 @@
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.deps.json
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.dll
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.pdb
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Core.dll
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Data.dll
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Core.pdb
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Data.pdb
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.csproj.AssemblyReference.cache
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.AssemblyInfoInputs.cache
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.AssemblyInfo.cs
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.csproj.CoreCompileInputs.cache
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.csproj.CopyComplete
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.dll
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\refint\Repository.dll
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.pdb
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\ref\Repository.dll

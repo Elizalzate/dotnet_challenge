@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "r2hUCeIpcxU0TWaxN3Wxno3xbQvO6hz+G1dLBWwI26Rw/XI0L/iWkG0a9xZv61HJN6V7qHF8EiXeD3/t5d7+CQ==",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\Valoracion\\Data\\Data.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.episerver.com/feed/packages.svc/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "ff+kxP8Y4B4pRYWUBP4O1N4wKRKVGSWajuSXaLpTnvn6lj/EQStuR782+GETQDwKEin6Dw/hFQhK7kicgrOEBA==",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\Valoracion\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elizabeth.alzatez\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.episerver.com/feed/packages.svc/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
