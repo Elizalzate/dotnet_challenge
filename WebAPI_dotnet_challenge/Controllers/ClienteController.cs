@@ -34,9 +34,16 @@ namespace GestionClientesAPI.Controllers
         }
 
         [HttpPut("/{documento}")]
-        public async Task<ActionResult<Cliente>> UpdateCliente(Cliente cliente, string documento)
+        public async Task<ActionResult<Cliente>> UpdateClient(Cliente cliente, string documento)
         {
             var client = _repo.UpdateClient(cliente, documento);
+            return client == null ? NotFound("Cliente no encontrado") : Ok(client);
+        }
+
+        [HttpDelete("/{documento}")]
+        public async Task<ActionResult<Cliente>> DeleteClient(string documento)
+        {
+            var client = _repo.DeleteClient(documento);
             return client == null ? NotFound("Cliente no encontrado") : Ok(client);
         }
     }

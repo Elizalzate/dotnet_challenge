@@ -12,6 +12,10 @@ namespace Repository
         List<Cliente> CreateClient(Cliente client);
         List<Cliente> GetAll();
         Cliente? GetClient(string documento);
+        List<Cliente> GetClientByCity(string ciudad);
         Cliente? UpdateClient(Cliente client, string documento);
+
+        List<Cliente> DeleteClient(string documento);
+
     }
 }

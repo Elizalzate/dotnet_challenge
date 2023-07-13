@@ -11,7 +11,10 @@ namespace Repository
     {
         List<Sucursal> CreateSucursal(Sucursal sucursal);
         List<Sucursal> GetAll();
+        List<Sucursal> GetSucursalByCity(string ciudad);
         Sucursal? GetSucursal(string codigo);
-        Sucursal? UpdateClient(Cliente client, string documento);
+        Sucursal? UpdateSucursal(Sucursal sucursal, string codigo);
+
+        List<Sucursal> DeleteSucursal(string codigo);
     }
 }

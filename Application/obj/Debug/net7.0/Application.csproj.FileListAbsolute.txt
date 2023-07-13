@@ -1,0 +1,15 @@
+C:\Dev\Valoracion\Application\bin\Debug\net7.0\Application.deps.json
+C:\Dev\Valoracion\Application\bin\Debug\net7.0\Application.dll
+C:\Dev\Valoracion\Application\bin\Debug\net7.0\Application.pdb
+C:\Dev\Valoracion\Application\bin\Debug\net7.0\Core.dll
+C:\Dev\Valoracion\Application\bin\Debug\net7.0\Core.pdb
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.dll
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\refint\Application.dll
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\Application.pdb
+C:\Dev\Valoracion\Application\obj\Debug\net7.0\ref\Application.dll
