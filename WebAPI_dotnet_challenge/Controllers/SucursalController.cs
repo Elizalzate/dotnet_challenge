@@ -26,24 +26,24 @@ namespace GestionSucursalsAPI.Controllers
             return Sucursals == null ? NotFound("Sucursals no encontrados.") : Ok(Sucursals);
         }
 
-        [HttpGet("/{documento}")]
-        public async Task<ActionResult<Sucursal>> GetSucursal(string documento)
+        [HttpGet("/{codigo}")]
+        public async Task<ActionResult<Sucursal>> GetSucursal(string codigo)
         {
-            var Sucursal = _repo.GetSucursal(documento);
+            var Sucursal = _repo.GetSucursal(codigo);
             return Sucursal == null ? NotFound("Sucursal no encontrado.") : Ok(Sucursal);
         }
 
-        [HttpPut("/{documento}")]
-        public async Task<ActionResult<Sucursal>> UpdateSucursal(Sucursal Sucursal, string documento)
+        [HttpPut("/{codigo}")]
+        public async Task<ActionResult<Sucursal>> UpdateSucursal(Sucursal Sucursal, string codigo)
         {
-            var Sucursa = _repo.UpdateSucursal(Sucursal, documento);
+            var Sucursa = _repo.UpdateSucursal(Sucursal, codigo);
             return Sucursal == null ? NotFound("Sucursal no encontrado") : Ok(Sucursal);
         }
 
-        [HttpDelete("/{documento}")]
-        public async Task<ActionResult<Sucursal>> DeleteSucursal(string documento)
+        [HttpDelete("/{codigo}")]
+        public async Task<ActionResult<Sucursal>> DeleteSucursal(string codigo)
         {
-            var Sucursal = _repo.DeleteSucursal(documento);
+            var Sucursal = _repo.DeleteSucursal(codigo);
             return Sucursal == null ? NotFound("Sucursal no encontrado") : Ok(Sucursal);
         }
     }

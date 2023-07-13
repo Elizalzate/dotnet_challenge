@@ -23,8 +23,7 @@ public class ClienteRepository : IClienteRepository
         var cliente = _data.Clientes.SingleOrDefault(x => x.Documento == client.Documento);
         if (cliente == null)
         {
-            client.NombreCompleto = cliente.NombreCompleto;
-            client.TipoCliente = cliente.TipoCliente;
+            _data.Clientes.Add(client);
         }
         return _data.Clientes;
     }
