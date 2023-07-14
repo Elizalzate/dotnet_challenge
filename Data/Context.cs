@@ -12,14 +12,14 @@ public class Context : IContext
         Clientes = new List<Cliente>
         {
             new Cliente {
-                TipoCliente = "Natural",
-                TipoDocumento = "Cédula de ciudadania",
+                IdTipoCliente = 1,
+                IdTipoDocumento = 1,
                 Documento = "1033523258",
                 NombreCompleto = "Toribio Pérez"
             },
             new Cliente {
-                TipoCliente = "Natural",
-                TipoDocumento = "Cédula de ciudadania",
+                IdTipoCliente = 1,
+                IdTipoDocumento = 1,
                 Documento = "123",
                 NombreCompleto = "prueba"
             }

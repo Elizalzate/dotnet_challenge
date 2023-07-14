@@ -28,14 +28,15 @@ public class ClienteRepository : IClienteRepository
         return _data.Clientes;
     }
 
-    public List<Cliente> DeleteClient(string documento)
+    public string DeleteClient(string documento)
     {
         var cliente = _data.Clientes.SingleOrDefault(x =>x.Documento == documento);
         if(cliente != null)
         {
             _data.Clientes.Remove(cliente);
+            return "cliente eliminado correctamente";
         }
-        return _data.Clientes;
+        return "Cliente no encontrado";
     }
 
     public List<Cliente> GetAll()
@@ -62,7 +63,6 @@ public class ClienteRepository : IClienteRepository
         if (client != null)
         {
             client.NombreCompleto = cliente.NombreCompleto;
-            client.TipoCliente = cliente.TipoCliente;
         }
         return client;
     }

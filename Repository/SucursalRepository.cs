@@ -26,14 +26,14 @@ namespace Repository
             return _data.Sucursales;
         }
 
-        public List<Sucursal> DeleteSucursal(string codigo)
+        public string DeleteSucursal(string codigo)
         {
             var sucursal = _data.Sucursales.SingleOrDefault(x => x.CodigoSucursal == codigo);
             if (sucursal != null)
             {
                 _data.Sucursales.Remove(sucursal);
             }
-            return _data.Sucursales;
+            return "Sucursal eliminada exitosamente.";
         }
 
         public List<Sucursal> GetAll()

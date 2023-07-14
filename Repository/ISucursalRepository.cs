@@ -15,6 +15,6 @@ namespace Repository
         Sucursal? GetSucursal(string codigo);
         Sucursal? UpdateSucursal(Sucursal sucursal, string codigo);
 
-        List<Sucursal> DeleteSucursal(string codigo);
+        string DeleteSucursal(string codigo);
     }
 }

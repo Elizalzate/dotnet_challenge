@@ -15,7 +15,7 @@ namespace Repository
         List<Cliente> GetClientByCity(string ciudad);
         Cliente? UpdateClient(Cliente client, string documento);
 
-        List<Cliente> DeleteClient(string documento);
+        string DeleteClient(string documento);
 
     }
 }
