@@ -15,5 +15,7 @@ namespace Core
         public string TelefonoFijo { get; set; } = String.Empty;
         public string TelefonoCelular { get; set; } = String.Empty;
         public string Email { get; set; } = String.Empty;
+
+        public Cliente Cliente { get; set; }
     }
 }

@@ -8,6 +8,7 @@ namespace Core
 {
     public class SucursalDetalles
     {
+        public string CodigoSucursal { get; set; }
         public string Direccion { get; set; } = String.Empty;
         public string Ciudad { get; set; } = String.Empty;
         public string Pais { get; set; } = "Colombia";

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +26,8 @@ public class DatabaseGestion : DbContext
     {
         base.OnModelCreating(builder);
         builder.Entity<Cliente>().ToTable("Cliente");
+        builder.Entity<Cliente>().HasOne(e => e.ClienteDetalles).WithOne(e => e.Cliente).HasForeignKey<ClienteDetalles>(e => e.Documento).IsRequired();
+    
         builder.Entity<Cliente>().HasKey(x => x.Documento);
         builder.Entity<Cliente>().Property(x => x.Documento).IsRequired();
 
@@ -38,8 +41,14 @@ public class DatabaseGestion : DbContext
         builder.Entity<Sucursal>().ToTable("Sucursal");
         builder.Entity<Sucursal>().HasKey(x => x.CodigoSucursal);
 
+        builder.Entity<SucursalDetalles>().ToTable("Sucursal");
+        builder.Entity<SucursalDetalles>().HasKey(x => x.CodigoSucursal);
+
         builder.Entity<TipoDocumento>().ToTable("TipoDocumento");
         builder.Entity<TipoDocumento>().HasKey(x => x.Id);
+
+        builder.Entity<TipoCliente>().ToTable("TipoCliente");
+        builder.Entity<TipoCliente>().HasKey(x => x.Id);
 
     }
 

@@ -62,7 +62,7 @@ namespace Repository
             var sede = _data.Sucursales.SingleOrDefault(x => x.CodigoSucursal == codigo);
             if (sede != null)
             {
-                _data.Sucursales.Remove(sucursal);
+                // falta corregir
             }
             return sede;
         }
