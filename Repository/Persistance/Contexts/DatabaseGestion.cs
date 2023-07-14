@@ -25,6 +25,14 @@ public class DatabaseGestion : DbContext
     {
         base.OnModelCreating(builder);
         builder.Entity<Cliente>().ToTable("Cliente");
+        builder.Entity<Cliente>().HasKey(x => x.Documento);
+        builder.Entity<ClienteDetalles>().ToTable("ClienteDetalles");
+        builder.Entity<ClienteDetalles>().HasKey(x => x.Documento);
+        builder.Entity<Sucursal>().ToTable("Sucursal");
+        builder.Entity<Sucursal>().HasKey(x => x.CodigoSucursal);
+        builder.Entity<TipoDocumento>().ToTable("TipoDocumento");
+        builder.Entity<TipoDocumento>().HasKey(x => x.Id);
+
     }
 
 

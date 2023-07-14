@@ -1,5 +1,7 @@
 using Data;
+using Microsoft.Extensions.DependencyInjection;
 using Repository;
+using Repository.Persistance.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IContext, Context>();
 builder.Services.AddScoped<ClienteRepository>();
 builder.Services.AddScoped<SucursalRepository>();
+var connectionString = "Data Source=database.db";
+builder.Services.AddSqlite<DatabaseGestion>(connectionString);
 
 var app = builder.Build();
 
