@@ -1,3 +1,4 @@
+using Application.Validators;
 using Data;
 using Microsoft.Extensions.DependencyInjection;
 using Repository;
@@ -14,6 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IContext, Context>();
 builder.Services.AddScoped<ClienteRepository>();
 builder.Services.AddScoped<SucursalRepository>();
+builder.Services.AddScoped<ClienteValidator>();
 var connectionString = "Data Source=database.db";
 builder.Services.AddSqlite<DatabaseGestion>(connectionString);
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Resources;
-using FluentValidation;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +8,30 @@ using Core;
 
 namespace Application.Validators;
 
-public class AdicionValidator : AbstractValidator<Cliente>
+public class ClienteValidator 
 {
-    /*public ClienteValidator()
+    public bool Validate(Cliente cliente, out List<string> errors)
     {
+        errors = new List<string>();
 
-        RuleFor(inc => inc.TipoCliente)
-            .NotEmpty().WithMessage(String.Format("Debe especificar si el cliente es persona natural o jurídica", "TipoCliente"));
+        // Campos obligatorios
+        if (string.IsNullOrEmpty(cliente.Documento))
+        {
+            errors.Add("El documento es un campo requerido.");
+        }
 
-        RuleFor(inc => inc.RazonSocial)
-            .NotEmpty().WithMessage(String.Format("Si es persona jurídica, el campo Razón Social no debe estar vacío", "RazonSocial"));
-    }*/
+        if(string.IsNullOrEmpty(cliente.IdTipoCliente.ToString()))
+        {
+            errors.Add("El tipo de persona es un campo obligatorio.");
+        }
+
+        if (string.IsNullOrEmpty(cliente.IdTipoDocumento.ToString()))
+        {
+            errors.Add("El tipo de documento es un campo obligatorio.");
+        }
+
+
+        return errors.Count == 0;
+    }
 }
 

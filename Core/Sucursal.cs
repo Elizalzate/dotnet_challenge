@@ -12,4 +12,6 @@ public class Sucursal
     public string NombreSucursal { get; set; } = String.Empty;
     public string CodigoVendedor { get; set; } = String.Empty;
     public double CupoCredito { get; set; } 
+
+    public SucursalDetalles SucursalDetalles { get; set; }
 }

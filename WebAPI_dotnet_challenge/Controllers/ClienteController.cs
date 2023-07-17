@@ -1,3 +1,4 @@
+using Application.Validators;
 using Core;
 using Data;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,23 @@ namespace GestionClientesAPI.Controllers
     {
         private readonly IContext _data;
         private readonly ClienteRepository _repo;
+        private readonly ClienteValidator _clienteValidator;
 
-        public ClienteController(IContext data, ClienteRepository repo)
+        public ClienteController(IContext data, ClienteRepository repo, ClienteValidator clienteValidator)
         {
             _data = data;
             _repo = repo;
+            _clienteValidator = clienteValidator;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Cliente>> CreateClient(Cliente cliente)
+        {
+            
+           
+            var client = _repo.CreateClient(cliente);
+            return Ok(client);
+
         }
 
         [HttpGet]

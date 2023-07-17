@@ -1,4 +1,5 @@
 C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.deps.json
+C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.runtimeconfig.json
 C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.dll
 C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.pdb
 C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Core.dll
@@ -14,6 +15,5 @@ C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.csproj.CopyComplete
 C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.dll
 C:\Dev\Valoracion\Repository\obj\Debug\net7.0\refint\Repository.dll
 C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.pdb
-C:\Dev\Valoracion\Repository\obj\Debug\net7.0\ref\Repository.dll
-C:\Dev\Valoracion\Repository\bin\Debug\net7.0\Repository.runtimeconfig.json
 C:\Dev\Valoracion\Repository\obj\Debug\net7.0\Repository.genruntimeconfig.cache
+C:\Dev\Valoracion\Repository\obj\Debug\net7.0\ref\Repository.dll

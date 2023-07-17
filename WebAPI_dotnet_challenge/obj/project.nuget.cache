@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xFygPjPb+Qlpkh8WfZ+ctmiYSiVbs+TpSxFoB4vIjMX9G5l+7Hw0CfF38vuHAbIftCMkZd+4bGdYEIJg7xvC/A==",
+  "dgSpecHash": "K4xDoh3Qm/0djunLnRcwbaGCuDYxXrCvOnLtNAoMF/WuVVPgwVixDDxD66ND4fKMherc6nTuTXDLi0tPvn0ExA==",
   "success": true,
   "projectFilePath": "C:\\Dev\\Valoracion\\WebAPI_dotnet_challenge\\GestionClientesAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\elizabeth.alzatez\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\elizabeth.alzatez\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\elizabeth.alzatez\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.9\\microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "C:\\Users\\elizabeth.alzatez\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.9\\microsoft.data.sqlite.core.7.0.9.nupkg.sha512",
