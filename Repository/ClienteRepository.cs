@@ -35,10 +35,11 @@ public class ClienteRepository : IClienteRepository
 
     public string DeleteClient(string documento)
     {
-        var cliente = _data.Clientes.SingleOrDefault(x =>x.Documento == documento);
+        var cliente = _db.Cliente.SingleOrDefault(x =>x.Documento == documento);
         if(cliente != null)
         {
-            _data.Clientes.Remove(cliente);
+            _db.Cliente.Remove(cliente);
+            _db.SaveChanges();
             return "cliente eliminado correctamente";
         }
         return "Cliente no encontrado";
@@ -46,30 +47,37 @@ public class ClienteRepository : IClienteRepository
 
     public List<Cliente> GetAll()
     {
-       /* var clientes = db.Blogs
-            .OrderBy(b => b.BlogId)
-            .First();*/
-        return _data.Clientes.ToList();
+        var clientes = _db.Cliente;
+        return clientes.ToList();
     }
 
     public Cliente? GetClient(string documento)
     {
-        return _data.Clientes.SingleOrDefault(x => x.Documento == documento);
+        return _db.Cliente.SingleOrDefault(x => x.Documento == documento);
     }
 
     public List<Cliente> GetClientByCity(string ciudad)
     {
-        throw new NotImplementedException();
+        return null;
+        /*return _db.Cliente
+            .Join(_db.ClienteDetalles, 
+            ClienteKey => _db.Cliente.Documento,
+            DetallesKey => _db.ClienteDetalles.Documento)*/
+            
+    
     }
 
-    public Cliente? UpdateClient(Cliente cliente, string documento)
+    public string UpdateClient(Cliente cliente, string documento)
     {
-        var client = _data.Clientes.SingleOrDefault(x => x.Documento == documento);
+        var client = _db.Cliente.SingleOrDefault(x => x.Documento == documento);
         if (client != null)
         {
             client.NombreCompleto = cliente.NombreCompleto;
+            client.RazonSocial = cliente.RazonSocial;
+            _db.SaveChanges();
+            return "Información actualizada correctamente";
         }
-        return client;
+        return "Cliente no encontrado";
     }
 
     

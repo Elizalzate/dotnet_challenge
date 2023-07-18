@@ -20,7 +20,7 @@ builder.Services.AddScoped<ClienteRepository>();
 builder.Services.AddScoped<SucursalRepository>();
 builder.Services.AddScoped<ClienteValidator>();
 builder.Services.AddDbContext<DatabaseGestion>(options => 
-options.UseSqlServer("Data Source=LATAM-3ZVBLG3\\EALZATE;Initial Catalog=Valoracion;"));
+options.UseSqlServer("Data Source=LATAM-3ZVBLG3\\EALZATE; Initial Catalog=Valoracion;Integrated Security=True;Encrypt=False;"));
 builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
