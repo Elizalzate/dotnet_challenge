@@ -1,8 +1,11 @@
 using Application.Validators;
 using Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Repository.Persistance.Contexts;
+using System.Xml.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +19,9 @@ builder.Services.AddScoped<IContext, Context>();
 builder.Services.AddScoped<ClienteRepository>();
 builder.Services.AddScoped<SucursalRepository>();
 builder.Services.AddScoped<ClienteValidator>();
-var connectionString = "Data Source=database.db";
-builder.Services.AddSqlite<DatabaseGestion>(connectionString);
+builder.Services.AddDbContext<DatabaseGestion>(options => 
+options.UseSqlServer("Data Source=LATAM-3ZVBLG3\\EALZATE;Initial Catalog=Valoracion;Integrated Security=True;"));
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 

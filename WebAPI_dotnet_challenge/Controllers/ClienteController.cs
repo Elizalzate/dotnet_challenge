@@ -1,6 +1,8 @@
 using Application.Validators;
+using AutoMapper;
 using Core;
 using Data;
+using GestionClientesAPI.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 
@@ -12,23 +14,21 @@ namespace GestionClientesAPI.Controllers
     {
         private readonly IContext _data;
         private readonly ClienteRepository _repo;
-        private readonly ClienteValidator _clienteValidator;
+        private readonly IMapper _mapper;
 
-        public ClienteController(IContext data, ClienteRepository repo, ClienteValidator clienteValidator)
+        public ClienteController(IContext data, ClienteRepository repo, IMapper mapper)
         {
             _data = data;
             _repo = repo;
-            _clienteValidator = clienteValidator;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public async Task<ActionResult<Cliente>> CreateClient(Cliente cliente)
-        {
-            
-           
-            var client = _repo.CreateClient(cliente);
-            return Ok(client);
-
+        public async Task<ActionResult<Cliente>> CreateClient(CreateClientDTO clienteDTO)
+        {           
+            var client = _mapper.Map<Cliente>(clienteDTO);
+            _repo.CreateClient(client);
+            return Created($"/api/cliente/{client.Documento}",client);
         }
 
         [HttpGet]

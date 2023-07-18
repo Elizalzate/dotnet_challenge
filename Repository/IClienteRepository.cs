@@ -9,7 +9,7 @@ namespace Repository
 {
     public interface IClienteRepository
     {
-        List<Cliente> CreateClient(Cliente client);
+        string CreateClient(Cliente client);
         List<Cliente> GetAll();
         Cliente? GetClient(string documento);
         List<Cliente> GetClientByCity(string ciudad);

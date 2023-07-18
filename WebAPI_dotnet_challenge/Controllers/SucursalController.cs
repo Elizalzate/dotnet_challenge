@@ -17,7 +17,11 @@ namespace GestionSucursalsAPI.Controllers
             _data = data;
             _repo = repo;
         }
-
+        [HttpPost]
+        public async Task<ActionResult<Sucursal>> CreateSucursal(Sucursal sucursal)
+        {
+            return Ok( _repo.CreateSucursal(sucursal));
+        }
         [HttpGet]
         public async Task<ActionResult<Sucursal>> GetSucursals()
         {

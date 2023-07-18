@@ -9,7 +9,7 @@ namespace Repository
 {
     public interface ISucursalRepository
     {
-        List<Sucursal> CreateSucursal(Sucursal sucursal);
+        string CreateSucursal(Sucursal sucursal);
         List<Sucursal> GetAll();
         List<Sucursal> GetSucursalByCity(string ciudad);
         Sucursal? GetSucursal(string codigo);

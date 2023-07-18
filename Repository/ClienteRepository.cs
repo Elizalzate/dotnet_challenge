@@ -1,6 +1,7 @@
 ﻿using Core;
 using Data;
 using Microsoft.EntityFrameworkCore.Storage;
+using Repository.Persistance.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,20 +13,24 @@ namespace Repository;
 public class ClienteRepository : IClienteRepository
 {
     private readonly IContext _data;
+    private readonly DatabaseGestion _db;
 
-    public ClienteRepository(IContext data)
+    public ClienteRepository(IContext data, DatabaseGestion db)
     {
         _data = data;
+        _db = db;
     }
 
-    public List<Cliente> CreateClient(Cliente client)
+    public string CreateClient(Cliente client)
     {
-        var cliente = _data.Clientes.SingleOrDefault(x => x.Documento == client.Documento);
+        var cliente = _db.Cliente.SingleOrDefault(x => x.Documento == client.Documento);
         if (cliente == null)
         {
-            _data.Clientes.Add(client);
+            _db.Cliente.Add(client);
+            _db.SaveChanges();
+            return "Cliente creado correctamente";
         }
-        return _data.Clientes;
+        return "Cliente no pudo ser creado";
     }
 
     public string DeleteClient(string documento)

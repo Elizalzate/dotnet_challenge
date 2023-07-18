@@ -7,8 +7,9 @@ namespace UnitTests.Cliente.AddCliente;
 public class ClienteTest
 {
     private readonly ClienteController _clienteController;
-
+    /*
     [Fact]
     public async Task Cliente_getClient {
-    }
+
+    }*/
 }

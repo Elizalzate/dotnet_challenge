@@ -8,7 +8,7 @@
         public string? NombreCompleto { get; set; } = string.Empty;
         public string? RazonSocial { get; set; } = string.Empty;
 
-        public ClienteDetalles? ClienteDetalles { get; set; }
-        public ICollection<ClienteSucursal> ClienteSucursal { get; set; }
+        public ClienteDetalles? Detalles { get; set; }
+
     }
 }

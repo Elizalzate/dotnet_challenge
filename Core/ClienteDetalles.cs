@@ -9,13 +9,14 @@ namespace Core
     public class ClienteDetalles
     {
         public string Documento { get; set; } 
-        public string Direccion { get; set; } = String.Empty;
-        public string Ciudad { get; set; } = String.Empty;
-        public string Pais { get; set; } = "Colombia";
+        public string Direccion { get; set; }
+        public string Ciudad { get; set; }
+        public string Pais { get; set; }
         public string TelefonoFijo { get; set; } = String.Empty;
         public string TelefonoCelular { get; set; } = String.Empty;
         public string Email { get; set; } = String.Empty;
 
         public Cliente Cliente { get; set; }
+
     }
 }

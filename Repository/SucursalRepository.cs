@@ -16,14 +16,15 @@ namespace Repository
         {
             _data = data;
         }
-        public List<Sucursal> CreateSucursal(Sucursal sucursal)
+
+        public string CreateSucursal(Sucursal sucursal)
         {
             var sucursals = _data.Sucursales.SingleOrDefault(x => x.CodigoSucursal == sucursal.CodigoSucursal);
             if (sucursals == null)
             {
                 _data.Sucursales.Add(sucursal);
             }
-            return _data.Sucursales;
+            return "Sucursal creada correctamente!";
         }
 
         public string DeleteSucursal(string codigo)
