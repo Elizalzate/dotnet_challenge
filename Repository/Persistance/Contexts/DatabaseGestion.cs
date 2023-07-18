@@ -27,9 +27,11 @@ public class DatabaseGestion : DbContext
 
         builder.Entity<Cliente>().HasKey(c => c.Documento);
         builder.Entity<ClienteDetalles>().HasKey(c => c.Documento);
+        builder.Entity<ClienteSucursal>().HasNoKey();
         builder.Entity<Sucursal>().HasKey(c => c.CodigoSucursal);
         builder.Entity<SucursalDetalles>().HasKey(c => c.CodigoSucursal);
         builder.Entity<TipoDocumento>().HasKey(c => c.Id);
+        builder.Entity<TipoCliente>().HasKey(c => c.Id);
 
         // Configure the one-to-many relationship using Fluent API
         builder.Entity<Cliente>()
